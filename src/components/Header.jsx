@@ -1,7 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import { BsThreeDots } from "react-icons/bs";
 
 const Header = () => {
+  const [activeLink, setActiveLink] = useState("Posts");
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
   return (
     <div className="grid grid-rows-[auto_auto_auto]">
       {/* Cover Image Section */}
@@ -82,27 +87,26 @@ const Header = () => {
       {/* Links Section */}
       <div className="grid grid-cols-[1fr_1fr] p-2 md:mt-2">
         <div className="flex flex-row items-center justify-center gap-2 md:gap-4">
-          <a href="#" className="text-xs font-medium md:text-base">
-            Posts
-          </a>
-          <a href="#" className="text-xs font-medium md:text-base">
-            About
-          </a>
-          <a href="#" className="text-xs font-medium md:text-base">
-            Mention
-          </a>
-          <a href="#" className="text-xs font-medium md:text-base">
-            Reviews
-          </a>
-          <a href="#" className="text-xs font-medium md:text-base">
-            Followers
-          </a>
-          <a href="#" className="text-xs font-medium md:text-base">
-            Photos
-          </a>
-          <a href="#" className="text-xs font-medium md:text-base">
-            More
-          </a>
+          {[
+            "Posts",
+            "About",
+            "Mention",
+            "Reviews",
+            "Followers",
+            "Photos",
+            "More",
+          ].map((link) => (
+            <a
+              key={link}
+              href="#"
+              className={`text-xs font-medium md:text-base ${
+                activeLink === link ? "text-blue-600 underline" : "text-black"
+              }`}
+              onClick={() => handleLinkClick(link)}
+            >
+              {link}
+            </a>
+          ))}
         </div>
         <div>
           <div className="flex items-center justify-center">
