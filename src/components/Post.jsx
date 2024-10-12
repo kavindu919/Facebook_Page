@@ -28,7 +28,7 @@ const Post = () => {
         <img
           src="https://picsum.photos/800/400"
           alt="Post image"
-          className="mb-3 rounded-lg w-full h-auto" // Makes image responsive
+          className="mb-3 rounded-lg w-full h-auto"
         />
         <div className="flex flex-row gap-2 mb-2">
           <div className="flex gap-1 items-center justify-center">
