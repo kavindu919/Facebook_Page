@@ -5,7 +5,7 @@ import { FcLike } from "react-icons/fc";
 
 const Post = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen  p-4">
       {/* Post Container */}
       <div className="mb-4 rounded-lg bg-white p-4 shadow-md">
         {/* User Information */}
