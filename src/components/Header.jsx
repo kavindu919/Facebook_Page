@@ -1,5 +1,4 @@
 import React from "react";
-import WhatsAppOutlined, { SmallDashOutlined } from "@ant-design/icons";
 
 const Header = () => {
   return (
@@ -106,7 +105,7 @@ const Header = () => {
         </div>
         <div>
           <div className="flex items-center justify-center">
-            <SmallDashOutlined className=" text-xl" />
+            <BsThreeDots className="text-2xl" />
           </div>
         </div>
       </div>
